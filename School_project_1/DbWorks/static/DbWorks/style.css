@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+header{
+    width: 100%;
+    min-height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-bottom: 91.5vh;
+    background: #fcd911;
+}
+.hey_menu{
+    width: 50%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background: #fcd911;
+}
+.hey_menu p{
+    text-align: center;
+    margin-top: 15px;
+}
+.line{
+    width: 90%;
+    height: 5px;
+    border-radius: 60px;
+    background: black;
+}
+.words{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    align-items: center;
+    width: 100%;
+}
+.List_of_jakory{
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    margin-left: 65%;
+    align-items: center;
+    list-style: none;
+    margin-right: 20px;
+}
+.List_of_jakory a{
+    color: black;
+    text-decoration: underline;
+}
+.List_of_jakory a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+.logo{
+    background-image: url(images/image.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 60px;
+    margin-left: 60px;
+}
+.shop{
+    width: 100%;
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    background: black;
+}
+::-webkit-scrollbar-thumb{
+    width: 5px;
+    height: 15px;
+    border-radius: 10px;
+    background: grey;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: white;
+}
+.Computers, .Headphones, .Mouses, .Keyboards, .Monitors, .Components{
+    width: 340px;
+    height: 337px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.Computers{
+    background-image: url(https://hips.hearstapps.com/hmg-prod/images/pop-desktop-computers-6553dcb9097ff.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*);
+}
+.Headphones{
+    background-image: url(https://a.allegroimg.com/original/119a14/965cf4304d2dbd4ad5afbce767b9/Sennheiser-HD-4-40BT-Wireless-Bluetooth-Headphones);
+}
+.Mouses{
+    background-image: url(https://img.joomcdn.net/f29e61de2ec5d5a66474b94a5ae513d93ba80154_original.jpeg);
+}
+.Keyboards{
+    background-image: url(https://resource.logitechg.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-keyboard/pro-x-keyboard-gallery-1.png?v=1);
+}
+.Monitors{
+    background-image: url(https://www.dihuni.com/wp-content/uploads/2022/05/1064380322.jpg);
+}
+.Components{
+    background-image: url(https://www.cgdirector.com/wp-content/uploads/media/2019/12/Screenshot_1-3.jpg);
+}
+.Center_block{
+    width: 76%;
+    display: grid;
+    grid-template-columns: repeat(3, 500px);
+    grid-row-gap: 50px;
+    grid-column-gap: 60px;
+}
+.Center_block div a{
+    display: block;
+    visibility: hidden;
+    font-size: 25px;
+    font-weight: 56;
+    color: orange;
+    transition: visibility 0.5s, margin-bottom 0.5s linear;
+    /* fonr-weight: 300 */
+}
+.Center_block div:hover a{
+    visibility: visible;
+    margin-bottom: 50px;
+    /* 20px */
+}
+.Center_block div{
+    transition: opacity 0.5s;
+}
+.Center_block div:hover{
+    opacity: 0.5;
+}
+.Comments{
+    height: 650px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+}
+.Commenting{
+    height: 650px;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.W_Com{
+    width: 90%;
+    height: 25%;
+    margin-right: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Saying_block{
+    height: 650px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.Say_1{
+    height: 50%;
+    color: yellow;
+    background: black;
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Say_2{
+    height: 35%;
+    width: 90%;
+    background: yellow;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Photo_1{
+    width: 80px;
+    height: 80px;
+    background-image: url(https://img.kupigolos.ru/hero/5e96fcc86ed0c.jpg?p=bh&s=50fc749b262ee32be3366509bb3b093b);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    margin-left: 65px;
+}
+.Text_of_comment{
+    width: 70%;
+    heighT: 70%;
+    background: lightgray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+.Text_of_comment p{
+    margin-left: 20px;
+}
+.Helping_block{
+    width: 100%;
+    height: 500px;
+    background: black;
+    display: flex;
+    color: yellow;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.Helping_block p{
+    height: 85%;
+    width: 400px;
+    font-size: 90px;
+    text-shadow: 5px 5px grey;
+}
+form{
+    height: 85%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 400px;
+    height: 40%;
+}
+input{
+    height: 75px;
+}
+textarea{
+    height: 150px;
+}
+input, textarea{
+    width: 90%;
+    border: 5px black;
+    border-radius: 10px;
+}
+label{
+    font-size: 22px;
+}
+.form_button{
+    width: 150px;
+    height: 50px;
+    border: none;
+    color: black;
+    background: orange;
+    border-radius: 10px;
+    transition: 1s;
+}
+.form_button:hover{
+    background: black;
+    border: 1px solid orange;
+    color: orange;
+    cursor: pointer;
+}
+.Copy_right_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background: lightgray;
+}
+.Copy_right_block div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 10px;
+}
+.Copy_right_block div p::after{
+    margin-left: 3px;
+}
+.Contact_number::after{
+    content: "\2706";
+}
+.Copy_rights::after{
+    content: "\00A9";
+}
+.E-mail_info::after{
+    content: "\2709";
+}
+#G_out_menu{
+    display: none;
+    /*margin-top: -2000px;*/
+    width: 250px;
+    height: 400px;
+    background: yellow;
+    border-radius: 10px;
+    position: absolute;
+    transition: 1s;
+    right: -200px;
+    top: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.TH30{
+    display: flex !important;
+    right: 10px !important;
+}
+.top-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 60px;
+    width: 230px;
+}
+.Cancel{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.left-bar, .right-bar{
+    width: 20px;
+    height: 3px;
+    background: red;
+    position: absolute;
+}
+.right-bar{
+    transform: rotate(-45deg);
+    right: 15px;
+}
+.left-bar{
+    transform: rotate(45deg);
+    left: 15px;
+}
+.bottom-side{
+    height: 340px;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/*.AD30{
+
+}*/
+/*#Orange_super_crush_100{
+    display: none;
+    width: 250px;
+    height: 700px;
+    right: -200px;
+    position: absolute;
+    transition: 1s;
+}*/

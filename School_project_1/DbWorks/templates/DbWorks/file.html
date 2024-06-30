@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="icon"href="{% static 'favicon.ico' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="{% static 'DbWorks/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'DbWorks/media.css' %}">
+</head>
+<body>
+    <header>
+        <div class="menu" id="Home">
+            <div class="logo"></div>
+            <div class="List_of_jakory">
+                <a href="#Home">Home</a>
+                <a href="#Shop">Shop</a>
+                <a href="#Comments">Comments</a>
+                <a href="#Help">Help</a>
+                <a onclick="Open_Buscket()">Cart</a>
+            </div>
+            <div id="G_out_menu">
+                <div class="top-side">
+                    <p>Here:</p>
+                    <div class="Cancel" onclick="Open_Buscket()">
+                        <span class="left-bar"></span>
+                        <span class="right-bar"></span>
+                    </div>
+                </div>
+                <div class="bottom-side">
+                    {% if card_products %}
+                    <div>
+                        <img class="cart_product_image" src="">
+                        <div class="cart_flex_block">
+                            <p></p>
+                            <button class="more_button">More</button>
+                        </div>
+                    </div>
+                    {% else %}
+                    <p>Empty</p>
+                    {% endif %}
+<!--                    If you won't make scroll ;)-->
+<!--                    <button>More</button>-->
+                </div>
+            </div>
+        </div>
+        <div class="hey_menu">
+            <p>Our page is dedicated to to technology fans and new vibes seekers. We have various products for various people. Fell like at your home!</p>
+            <div class="line"></div>
+            <div class="words">
+                <p>Zbiórka</p>
+                <p>Sprzedaż</p>
+                <p>Rekomendacje</p>
+            </div>
+        </div>
+    </header>
+    <div class="shop">
+        <div class="Center_block" id="Shop">
+            {% if category_list %}
+            {% for category in category_list %}
+            <div class="{{ category }}">
+                <a href="{% url 'DbWorks:product_page' category %}">{{ category }}</a>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="Comments" id="Comments">
+        <div class="Commenting">
+            {% if latest_comments %}
+            {% for comment in latest_comments %}
+            <div class="W_Com">
+                <div class="Photo_1"></div>
+                <div class="Text_of_comment">
+                    <p>{{ comment.comment }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+                <div>Nothing is here, Sorry(</div>
+            {% endif %}
+        </div>
+        <div class="Saying_block">
+            <div class="Say_1">
+                <p>A</p>
+            </div>
+            <div class="Say_2">
+                <p>B</p>
+            </div>
+        </div>
+    </div>
+    <div class="Helping_block" id="Help">
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+<!--            <label for="e-mail">Write your e-mail:</label>-->
+<!--            <input type="email" name="e-mail">-->
+<!--            <label for="MT">Write your comment:</label>-->
+<!--            <textarea name="MT"></textarea>-->
+            <button type="submit" class="form_button" value="send_comment">Submit</button>
+        </form>
+        <p>Here you can ask us about something!</p>
+    </div>
+    <div class="Copy_right_block">
+        <h4>Copy Rights</h4>
+        <div>
+            <p class="Contact_number">Telephone - 8800553535</p>
+            <p class="E-mail_info">E-mail - kasprzak.edu.pl</p>
+            <p class="Copy_rights">All copy rights by Bogumił</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam eligendi cum minus recusandae perspiciatis perferendis necessitatibus odio eveniet, vel similique ratione quibusdam ad expedita maxime! Nisi dicta quo nesciunt?</p>
+    </div>
+    <script src="{% static 'DbWorks/js/file.js' %}"></script>
+</body>
+</html>

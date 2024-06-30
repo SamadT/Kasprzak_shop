@@ -1,0 +1,14 @@
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .Center_block{
+    grid-template-columns: repeat(3, 300px);
+    grid-row-gap: 40px;
+    grid-column-gap: 50px;
+    }
+    .Computers, .Headphones, .mouses, .keyboards, .Monitors, .Components{
+    width: 270px;
+    height: 277px;
+    }
+    .Center_block div p{
+        font-size: 20px;
+    }
+}

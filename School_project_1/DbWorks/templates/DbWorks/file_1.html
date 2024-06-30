@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="icon"href="{% static 'favicon.ico' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'DbWorks/style_1.css' %}">
+    <link rel="stylesheet" href="{% static 'DbWorks/media_1.css' %}">
+    <title>Product page</title>
+</head>
+<!--context - product_names-->
+<body>
+    <div class="menu">
+            <div class="logo"></div>
+            <ul>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>Comments</li>
+                <li>Help</li>
+                <li>Koszyk</li>
+            </ul>
+    </div>
+    <div id="Over_block">
+        <div id="Modal_window"></div>
+    </div>
+    <div class="Infinitive_products">
+        {% if product_names %}
+        {% for product, specs in product_names.items %}
+        <div>
+            <img src="{{ cart_image_gen|get_item:product }}">
+            <uL>
+                {% for spec in specs|shorter_list %}
+                <li>{{ spec }}</li>
+                {% endfor %}
+            </uL>
+            <div>
+                <p>{{ product }}</p>
+                <section class="block_with_action_buttons">
+                    <button>Add to cart</button>
+                    <button id="more_button">More</button>
+                    <button>Buy</button>
+                </section>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="Problem_block">Sorry, but we have some problems with this category.</div>
+        {% endif %}
+    </div>
+<script src="{% static 'DbWorks/js/file_1.js' %}"></script>
+</body>
+</html>

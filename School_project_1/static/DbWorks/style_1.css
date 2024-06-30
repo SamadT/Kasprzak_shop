@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.menu{
+    display: flex;
+    background: yellow;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+}
+.logo{
+    background-image: url(images/image.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 60px;
+    margin-left: 20px;
+}
+ul{
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    margin-left: 65%;
+    align-items: center;
+    list-style: none;
+    margin-right: 20px;
+}
+li{
+    text-decoration: underline;
+}
+li:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    background: black;
+}
+::-webkit-scrollbar-thumb{
+    width: 5px;
+    height: 15px;
+    border-radius: 10px;
+    background: grey;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: white;
+}
+.Infinitive_products{
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Infinitive_products div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 95%;
+    height: 250px;
+    background: grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Infinitive_products div div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    height: 200px;
+    background: red;
+}
+.Infinitive_products div div button{
+    width: 150px;
+    height: 65px;
+    background: yellow;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    transition: 1s;
+}
+.Infinitive_products div div button:hover{
+    background: black;
+    color: yellow;
+    border: 1px solid yellow;
+}
+/* .Infinitive_products div div:first-child */
+img{
+    width: 12%;
+    height: 200px;
+}
+.Endblock{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+.Problem_block{
+    width: 100%;
+    min-height: 100vh;
+    color: black;
+    background: light-grey;
+}
+.block_with_action_buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 500px;
+}
+#Over_block{
+    display: none;
+    z-index: 2;
+    justify_content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: black;
+    opacity: 0.5;
+}
+.show_block{
+    display: flex;
+}
+#Modal_window{
+    display: flex;
+    justify_content: space-around;
+    align-items: center;
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    background: yellow;
+    margin-bottom: 500px;
+}
+.changing_flow{
+    margin-bottom: 0px;
+}
