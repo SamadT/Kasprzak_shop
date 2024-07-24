@@ -19,7 +19,7 @@
     height: 60px;
     margin-left: 20px;
 }
-ul{
+.menu ul{
     display: flex;
     width: 30%;
     flex-direction: row;
@@ -30,10 +30,10 @@ ul{
     list-style: none;
     margin-right: 20px;
 }
-li{
+.menu ul li{
     text-decoration: underline;
 }
-li:hover{
+.menu ul li:hover{
     text-decoration: none;
     cursor: pointer;
 }
@@ -88,6 +88,7 @@ li:hover{
     background: black;
     color: yellow;
     border: 1px solid yellow;
+    cursor: pointer;
 }
 /* .Infinitive_products div div:first-child */
 img{
@@ -116,28 +117,138 @@ img{
     width: 500px;
 }
 #Over_block{
-    display: none;
+    position: absolute;
+    display: flex;
     z-index: 2;
-    justify_content: center;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: black;
-    opacity: 0.5;
+    background: rgba(0, 0, 0, 0.89);
+    visibility: hidden;
 }
 .show_block{
-    display: flex;
+    visibility: visible !important;
 }
 #Modal_window{
     display: flex;
-    justify_content: space-around;
+    justify-content: space-around;
     align-items: center;
-    width: 600px;
-    height: 500px;
+    width: 1500px;
+    height: 800px;
     border-radius: 10px;
-    background: yellow;
-    margin-bottom: 500px;
+    background: #e5e5e5;
+    margin-top: -100%;
+    transition: 2s;
+    position: relative;
 }
 .changing_flow{
-    margin-bottom: 0px;
+    margin-top: 0% !important;
+}
+#Cancel_button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.left-bar,
+.right-bar {
+  width: 20px;
+  height: 3px;
+  background: red;
+  position: absolute;
+}
+.right-bar {
+  transform: rotate(-45deg);
+  right: 15px;
+}
+.left-bar {
+  transform: rotate(45deg);
+  right: 15px;
+}
+.MultiBlock{
+    width: 30%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.center_sizing_block{
+  width: 60%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.line_specs_block{
+  width: 90%;
+  height: 40%;
+  background: #403d39;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.line_specs_block ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 90%;
+  width: 10em;
+}
+.tittle_of_specs{
+  font-size: 25px;
+  color: #fca311;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #e5e5e5;
+}
+.button_position{
+    height: 25%;
+    width: 90%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+}
+button{
+    width: 90%;
+    height: 45%;
+    background: #fca311;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    transition: 1s;
+}
+button:hover{
+    background: black;
+    color: #fca311;
+    border: 1px solid #fca311;
+    cursor: pointer;
+}
+.image{
+    width: 100%;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: url(https://th.bing.com/th/id/OIP.ENFiI2expgUp0QSSpOaWQwHaF5?rs=1&pid=ImgDetMain);
+    position: absolute;
+    top: 0;
+}
+.center_sizing_block p{
+  width: 90%;
+  height: 50%;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

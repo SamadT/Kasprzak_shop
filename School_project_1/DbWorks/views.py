@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.views import generic
-from .models import Comments, Products
+from .models import Comments, Products, Buscket
 from django.utils import timezone
 from django.forms.models import model_to_dict
 from django.contrib import messages
@@ -44,7 +44,7 @@ class main_page(generic.ListView):
             form.clean()
             if len(Comments.objects.filter(comment=info.get("message"))) <= 0:
                 Comments.objects.create(user_name=info.get('email'), comment=info.get("message"), pub_date=timezone.now())
-                return HttpResponseRedirect("")
+                return HttpResponseRedirect("/")
             #messages.info(request, "Hello world!")
             return render(request, "DbWorks/file.html", {"form": form})
 
@@ -72,6 +72,15 @@ class product_page(generic.ListView):
                 dict_1.update({name: "/static/DbWorks/images/Nothing_found.jpg"})
         context['cart_image_gen'] = dict_1
         return context
+
+    def post(self, request, pk):
+        if "_add_to_cart" in request.POST:
+            Buscket.objects.create(tech_list={request.user.id: request.POST.get("_add_to_cart")})
+            return HttpResponseRedirect("/")
+        # elif "more_info" in request.POST:
+        #     return HttpResponseRedirect("/product_page/Computers/")
+        # elif "immediately_buy" in request.POST:
+        #     return HttpResponseRedirect("/product_page/Computers/#")
 
     @register.filter
     def get_item(dictionary, key):

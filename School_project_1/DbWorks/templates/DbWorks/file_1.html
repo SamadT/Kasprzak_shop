@@ -14,6 +14,58 @@
 </head>
 <!--context - product_names-->
 <body>
+    <div id="Over_block">
+        <div id="Modal_window">
+            <div id="Cancel_button">
+                    <span class="left-bar"></span>
+                    <span class="right-bar"></span>
+            </div>
+            <div class="MultiBlock">
+                <div class="image"></div>
+                <div class="button_position">
+                    <button>Add to cart</button>
+                    <button>Buy</button>
+                </div>
+            </div>
+            <div class="center_sizing_block">
+                <div class="line_specs_block">
+                    <ul>
+                        <li class="tittle_of_specs">Zagolovok</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                    </ul>
+                    <ul>
+                        <li class="tittle_of_specs">Zagolovok</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                    </ul>
+                    <ul>
+                        <li class="tittle_of_specs">Zagolovok</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                    </ul>
+                    <ul>
+                        <li class="tittle_of_specs">Zagolovok</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                    </ul>
+                    <ul>
+                        <li class="tittle_of_specs">Zagolovok</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                    </ul>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel hendrerit nisl. Donec consequat metus ut magna rhoncus tincidunt. Fusce dignissim dictum diam vel facilisis. Phasellus blandit malesuada arcu et mattis. Suspendisse quis vehicula nunc, ac cursus arcu. Integer tincidunt suscipit enim non placerat. Nullam quam eros, ullamcorper in nisl at, laoreet accumsan ante. Fusce ultricies convallis risus. Nulla facilisi. In hac habitasse platea dictumst. Vivamus in lacinia nisi, id convallis purus.
+                    <br><br>Etiam blandit erat et urna venenatis euismod. Nullam ex tortor, auctor eu porttitor eu, tincidunt vel sapien. Nam euismod sit amet urna id tincidunt. Donec ut efficitur tellus. Quisque ultricies, nisi placerat cursus varius, tortor ipsum accumsan diam, non consectetur nulla massa nec mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel hendrerit nisl. Donec consequat metus ut magna rhoncus tincidunt. Fusce dignissim dictum diam vel facilisis. Phasellus blandit malesuada arcu et mattis. Suspendisse quis vehicula nunc, ac cursus arcu. Integer tincidunt suscipit enim non placerat. Nullam quam eros, ullamcorper in nisl at, laoreet accumsan ante. Fusce ultricies convallis risus. Nulla facilisi. In hac habitasse platea dictumst. Vivamus in lacinia nisi, id convallis purus. Etiam blandit erat et urna venenatis euismod. Nullam ex tortor, auctor eu porttitor eu, tincidunt vel sapien. Nam euismod sit amet urna id tincidunt. Donec ut efficitur tellus. Quisque ultricies, nisi placerat cursus varius, tortor ipsum accumsan diam, non consectetur nulla massa nec mauris.
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="menu">
             <div class="logo"></div>
             <ul>
@@ -23,9 +75,6 @@
                 <li>Help</li>
                 <li>Koszyk</li>
             </ul>
-    </div>
-    <div id="Over_block">
-        <div id="Modal_window"></div>
     </div>
     <div class="Infinitive_products">
         {% if product_names %}
@@ -40,9 +89,12 @@
             <div>
                 <p>{{ product }}</p>
                 <section class="block_with_action_buttons">
-                    <button>Add to cart</button>
-                    <button id="more_button">More</button>
-                    <button>Buy</button>
+                    <form method="post">
+                        {% csrf_token %}
+                    <button name="_add_to_cart" value="{{ product }}">Add to cart</button>
+                    </form>
+                    <button name="more_info" id="more_button">More</button>
+                    <button name="immediately_buy">Buy</button>
                 </section>
             </div>
         </div>
